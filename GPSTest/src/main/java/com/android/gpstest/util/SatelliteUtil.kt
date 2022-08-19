@@ -289,7 +289,7 @@ internal object SatelliteUtil {
      * @return SbasType for the given GnssStatus svid for GnssStatus.CONSTELLATION_SBAS satellites
      */
     fun Int.toSbasType(): SbasType {
-        if (this == 120 || this == 123 || this == 126 || this == 136) {
+        if (this == 121 || this == 123 || this == 126 || this == 136 || this == 150) {
             return SbasType.EGNOS
         } else if (this == 125 || this == 140 || this == 141) {
             return SbasType.SDCM
@@ -298,9 +298,9 @@ internal object SatelliteUtil {
             return SbasType.SNAS
         } else if (this == 131 || this == 133 || this == 135 || this == 138) {
             return SbasType.WAAS
-        } else if (this == 127 || this == 128 || this == 139) {
+        } else if (this == 127 || this == 128 || this == 132) {
             return SbasType.GAGAN
-        } else if (this == 129 || this == 137) {
+        } else if (this == 129 || this == 137 || this == 139) {
             return SbasType.MSAS
         }
         return SbasType.UNKNOWN
